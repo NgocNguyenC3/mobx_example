@@ -12,7 +12,7 @@ import 'package:boilerplate/stores/form/form_store.dart';
 import 'package:boilerplate/stores/language/language_store.dart';
 import 'package:boilerplate/stores/post/post_store.dart';
 import 'package:boilerplate/stores/theme/theme_store.dart';
-import 'package:boilerplate/stores/user/user_store.dart';
+import 'package:boilerplate/stores/example/ex_store.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sembast/sembast.dart';
@@ -52,5 +52,7 @@ Future<void> setupLocator() async {
   getIt.registerSingleton(LanguageStore(getIt<Repository>()));
   getIt.registerSingleton(PostStore(getIt<Repository>()));
   getIt.registerSingleton(ThemeStore(getIt<Repository>()));
-  getIt.registerSingleton(UserStore(getIt<Repository>()));
+  
+  getIt.registerSingleton(ExStore());
+  
 }
